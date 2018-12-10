@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Contatore</title></head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <style>
+        div#counter {
+            font-weight: normal;
+            letter-spacing:5px;
+            padding: 6px;
+            font-size: 1.8em;
+            font-family: 'Gill Sans';
+            width: 500px;
+            text-align: center;
+            height: auto;
+            color: #333;
+            display:block;
+            margin:0px auto;
+            vertical-align:middle;
+            }
+        </style>
+    <body>
+        <div id="counter"></div>
+
+        <script>
+        var start = 0;
+        var speed = 100;
+        $(document).ready(function () {
+            go();
+            setInterval(function () {
+                go();
+            }, speed);
+        });
+        function go() {
+            $("#counter").html(start.toFixed(0));
+            start += 832;
+        }
+        </script>
+    </body>
+</html>
